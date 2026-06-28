@@ -241,6 +241,7 @@
       inset: 0;
       width: 100%; height: 100%;
       object-fit: cover;
+      object-position: 55% center;
       z-index: 0;
     }
     .hero-overlay {
@@ -784,6 +785,36 @@
       .menu-tab { flex: 1; text-align: center; padding: 0.7rem 0.75rem; font-size: 0.75rem; }
       .gallery-grid { grid-template-columns: 1fr; grid-template-rows: auto; }
       .gallery-item, .gallery-item:first-child { height: 220px; }
+
+      /* Hero allégé sur mobile */
+      .hero-content { padding: 1rem; }
+      .hero-eyebrow { font-size: 0.68rem; margin-bottom: 0.6rem; letter-spacing: 0.15em; }
+      .hero-title {
+        font-size: clamp(1.9rem, 9vw, 2.6rem);
+        margin-bottom: 0.75rem;
+        line-height: 1.15;
+      }
+      .hero-subtitle { display: none; }
+      .hero-badges {
+        gap: 0.5rem;
+        margin-bottom: 1.25rem;
+        flex-wrap: wrap;
+      }
+      /* Sur mobile : seulement 2 badges sur une ligne */
+      .badge { font-size: 0.72rem; padding: 0.35rem 0.8rem; }
+      .badge:nth-child(n+3) { display: none; }
+      .hero-actions {
+        flex-direction: row;
+        gap: 0.75rem;
+        flex-wrap: nowrap;
+      }
+      .btn-primary, .btn-outline {
+        padding: 0.7rem 1.25rem;
+        font-size: 0.85rem;
+        flex: 1;
+        text-align: center;
+      }
+      .scroll-arrow { bottom: 1rem; font-size: 1.2rem; }
     }
   </style>
 </head>
